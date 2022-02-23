@@ -28,6 +28,18 @@ sudo mv ./kind /usr/local/bin/kind
 #### Create Kind Cluster ####
 kind create cluster --image=nestybox/kindestnode:v1.20.7
 
+
+#### Install Minikube ####
+if (($(cat /proc/cpuinfo | grep processor | wc -l) > 2 )) && ls /dev/fuse > /dev/null; then
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+#### Create Minikube Cluster ####
+minikube start --base-image=nestybox/minikube-kicbase:v0.0.28
+else
+echo "not installing minikube since insufficient CPU or /dev/fuse not available"
+fi
+
 #### Kubectl ####
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
