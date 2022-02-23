@@ -8,5 +8,5 @@ See `.brev/setup.sh` for details.
 
 `docker-compose up`
 
-`kubectl apply -f example-manifest.yml`
+`kubectl apply -f k8s-pod-manifest.yml`
 
