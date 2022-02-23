@@ -4,6 +4,10 @@ See `.brev/setup.sh` for details.
 
 ## Run
 
+Create a workspace with the [brev cli](https://github.com/brevdev/brev-cli) `brev start https://github.com/brevdev/example-k8s-docker-compose-plus` or create one in the [the console](https://console.brev.dev).
+
+Then connect the the machine using the web ide, ssh, vscode, or a jetbrains ide!
+
 `gcloud init`
 
 `docker-compose up`
