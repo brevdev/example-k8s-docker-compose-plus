@@ -10,3 +10,6 @@ See `.brev/setup.sh` for details.
 
 `kubectl apply -f k8s-pod-manifest.yml`
 
+
+## Click the video below
+[![Watch the video](https://github.com/brevdev/example-k8s-docker-compose-plus/raw/main/video-preview.gif)](https://www.loom.com/share/8755b3eca9d149d7b9684f745db17251)
